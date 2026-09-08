@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>隔壁的音樂 · 夜讀</title>
+<meta name="description" content="禁忌 · 暗戀 · 18+ 成人虛構故事" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本篇為 18 歲以上成人虛構情慾故事，僅供成年讀者。<br>若你未滿 18 歲，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">夜讀<span>.</span>故事</div>
+      <a class="mini" href="index.html">書架 ↑</a>
+    </div>
+  </nav>
+
+  <article class="read-wrap">
+    <div class="breadcrumb"><a href="index.html">書架</a> / 第 02 篇</div>
+    <div class="no">NO. 02 · 禁忌 · 暗戀</div>
+    <h1>隔壁的音樂</h1>
+    <div class="story">
+    <p>她搬來那晚，牆那頭傳來大提琴。不是練習，是那種拉給自己聽的、不慌不忙的旋律。他貼著牆站了很久，像第一次聽見鄰居是個人。</p>
+    <p>他們從沒正式見面。取信時錯身，電梯裡點頭，僅此。但他記得她的聲音——某次她講電話笑出聲，穿過牆，像石子丟進他平靜的水。</p>
+    <p>他開始留意：她週三晚不開燈，只點一支蠟燭；她煮飯愛放收音機的老歌；她養一盆蕨，總忘澆，他趁她出門偷偷補。</p>
+    <p>暗戀在共享牆裡是種古怪的事——你離一個人這麼近，卻連手都沒牽過。他寫過幾封簡訊，打了又刪，最後只傳過一次：『你的大提琴，很好聽。』</p>
+    <p>她回：『謝謝。你也常聽得到吧，不好意思。』他看著那行字，竟覺得被允許了什麼。</p>
+    <p>某夜她音樂停，牆那頭有壓低的啜泣。他整夜沒睡，手機螢幕亮了又暗。他想敲門，又怕——怕那道門一開，牆就沒了，而他還沒準備好讓暗戀見光。</p>
+    <p>早晨她門縫塞出一張紙條：『昨晚謝謝你沒來。』他怔住，原來牆這麼薄，薄到連克制都聽得見。</p>
+    <p>他們的關係停在這種距離：比陌生人近，比朋友遠。他送她蕨的時候順手澆了水；她在電梯遞來一顆薄荷糖，說『你上次嗓子啞』。</p>
+    <p>他發現自己開始期待週三——她不開燈的那晚，蠟燭光暈會透過牆底縫，在地板上畫一道暖線。他對著那道線坐，像陪著。</p>
+    <p>禁忌不在於不能，而在於兩人都默契地選了不。鄰居這層身份，是他們給彼此最後的體面。</p>
+    <p>搬走那天，她留給他一張唱片，無字。他放上唱針，是那晚的曲子，錄音裡夾著極輕一句：『牆那頭的人，謝謝你聽了這麼久。』</p>
+    <p>他沒搬，留下來，為了那道每週三會亮起的暖線。有些暗戀不必結局，停在最美那秒，就夠陪一輩子。</p>
+    </div>
+    <p class="end">— 完 —</p>
+  </article>
+
+  <div class="nav-foot">
+    <div class="prev"><a href="story-01.html">← 上一篇</a></div>
+    <div class="next"><a class="next" href="story-03.html">下一篇 →</a></div>
+  </div>
+
+  <footer>18+ 成人虛構創作 · 請勿轉載</footer>
+
+  <script>
+    if (sessionStorage.getItem('erotic_ok') === '1') {
+      document.getElementById('gate').style.display = 'none';
+    }
+    document.getElementById('yes').addEventListener('click', function(){
+      try { sessionStorage.setItem('erotic_ok','1'); } catch(e){}
+      document.getElementById('gate').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* ===== 夜讀·故事 · 18+ 酒紅暗色風 ===== */
+:root{
+  --bg:#140d10;
+  --ink:#efe6e1;
+  --muted:#a89690;
+  --accent:#9c4a52;
+  --accent-soft:#2a171b;
+  --line:#2e2024;
+  --card:#1c1317;
+  --max:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"PingFang TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+.nav{position:sticky;top:0;z-index:10;background:rgba(20,13,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Georgia,"Songti TC",serif;font-weight:600;font-size:19px;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.nav a.mini{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+.hero{max-width:var(--max);margin:0 auto;padding:80px 24px 48px}
+.hero .kicker{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
+.hero h1{font-family:Georgia,"Songti TC",serif;font-size:clamp(34px,6vw,54px);line-height:1.15;font-weight:600;margin-bottom:16px}
+.hero p{font-size:clamp(15px,2.2vw,18px);color:var(--muted);max-width:48ch}
+
+.bookshelf{max-width:var(--max);margin:0 auto;padding:24px 24px 80px;display:grid;gap:18px}
+.book{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:8px;
+  transition:transform .18s ease,border-color .18s ease;
+}
+.book:hover{transform:translateX(4px);border-color:var(--accent)}
+.book .no{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.book .taste{font-size:12px;color:var(--muted)}
+.book h2{font-family:Georgia,"Songti TC",serif;font-size:23px;font-weight:600}
+.book .read{font-size:14px;font-weight:600;color:var(--accent)}
+
+.read-wrap{max-width:680px;margin:0 auto;padding:60px 24px 80px}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:32px}
+.breadcrumb a:hover{color:var(--accent)}
+.read-wrap .no{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
+.read-wrap h1{font-family:Georgia,"Songti TC",serif;font-size:clamp(28px,5vw,42px);line-height:1.2;font-weight:600;margin-bottom:30px}
+.story p{font-size:18px;line-height:2.05;margin-bottom:24px;color:#e3d8d2}
+.story .end{text-align:center;color:var(--muted);letter-spacing:.3em;margin-top:36px}
+
+.nav-foot{max-width:680px;margin:0 auto;padding:0 24px 72px;display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:24px}
+.nav-foot a{font-size:14px;color:var(--muted)}
+.nav-foot a:hover{color:var(--accent)}
+.nav-foot .next{text-align:right}
+
+footer{border-top:1px solid var(--line);padding:34px 24px;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.04em}
+
+/* ---- 18+ 年齡閘門 ---- */
+.gate{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+.gate-box{max-width:440px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:44px 34px}
+.gate-box .age{font-family:Georgia,serif;font-size:54px;color:var(--accent);font-weight:600;margin-bottom:14px}
+.gate-box h2{font-size:22px;margin-bottom:12px}
+.gate-box p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:26px}
+.gate-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.gate-yes{background:var(--accent);color:#fff;border:none;font-family:inherit;font-size:15px;font-weight:600;padding:13px 26px;border-radius:999px;cursor:pointer;transition:opacity .15s}
+.gate-yes:hover{opacity:.9}
+.gate-no{background:transparent;color:var(--muted);border:1px solid var(--line);font-family:inherit;font-size:15px;font-weight:600;padding:13px 26px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.gate-note{margin-top:20px;font-size:12px;color:var(--muted);opacity:.7}
+
+@media(max-width:600px){
+  .hero{padding:56px 20px 36px}
+  .bookshelf{padding:20px 20px 64px}
+  .read-wrap{padding:44px 20px 64px}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>未寄的日記 · 夜讀</title>
+<meta name="description" content="禁忌 · 秘密 · 18+ 成人虛構故事" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本篇為 18 歲以上成人虛構情慾故事，僅供成年讀者。<br>若你未滿 18 歲，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">夜讀<span>.</span>故事</div>
+      <a class="mini" href="index.html">書架 ↑</a>
+    </div>
+  </nav>
+
+  <article class="read-wrap">
+    <div class="breadcrumb"><a href="index.html">書架</a> / 第 05 篇</div>
+    <div class="no">NO. 05 · 禁忌 · 秘密</div>
+    <h1>未寄的日記</h1>
+    <div class="story">
+    <p>她在他書桌抽屜發現一本日記，沒鎖。不是故意翻，是替他收信時掉出來。第一頁寫：『給那個不能說的人。』她心漏一拍——她就是那個人。</p>
+    <p>日記裡，他用第三人稱寫她：『她今天笑的時候，左臉有個很小的酒窩，只有靠近才看見。』她摸自己左臉，從不知道他有在看。</p>
+    <p>他們是師徒。她跟他學陶，他比她大十七年，已婚，她從不越界。可日記裡全是界內的風景：她轉輪時垂下的髮，她失敗時咬唇，她捧著初窯作品像捧嬰。</p>
+    <p>『我不能在課堂上看太久，』他寫，『所以把目光存起來，回家寫下。』她讀到這，眼眶熱。原來克制也可以這麼用力。</p>
+    <p>她想把日記放回，卻翻到最新一頁：『今天她碰了我的手，為了校正轉輪。那三秒，我記了一週。』她想起，是有那回，她以為尋常。</p>
+    <p>秘密像陶土，捏在兩人手中，誰都不敢用力，怕成型就碎，或成型就必須有名字。她續寫了一行，在末頁背面：『我也記得那三秒。』沒署名。</p>
+    <p>下週上課，他手抖了一下，作品歪了。她知道他讀到了。他們誰都沒提，像什麼也沒發生，可轉輪轉得比以往慢，像是兩人都捨不得那節拍停。</p>
+    <p>禁忌不在年紀，在她有丈夫、他有家，而他們連『喜歡』都沒說出口，只敢寫進給『不能說的人』的日記。那本子是他們唯一的房間。</p>
+    <p>某天他合上日記，遞給她：『該燒了。』她接過，沒燒，夾回抽屜原處。他們默契地讓它留在那——一個不被承認、卻真實存在的角落。</p>
+    <p>後來她結婚、搬走，仍偶爾夢見轉輪。夢裡他總在寫，她總在讀，誰都不出聲。有些秘密不必說破，說破了就不再是秘密，也許就不再是那麼深的一種在乎。</p>
+    </div>
+    <p class="end">— 完 —</p>
+  </article>
+
+  <div class="nav-foot">
+    <div class="prev"><a href="story-04.html">← 上一篇</a></div>
+    <div class="next"><a class="next" href="index.html">回到書架 →</a></div>
+  </div>
+
+  <footer>18+ 成人虛構創作 · 請勿轉載</footer>
+
+  <script>
+    if (sessionStorage.getItem('erotic_ok') === '1') {
+      document.getElementById('gate').style.display = 'none';
+    }
+    document.getElementById('yes').addEventListener('click', function(){
+      try { sessionStorage.setItem('erotic_ok','1'); } catch(e){}
+      document.getElementById('gate').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

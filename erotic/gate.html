@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>夜讀 · 18+</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本網站含 18 歲以上成人虛構情慾故事，僅供成年讀者閱覽。<br>若你未滿 18 歲，或所在地法律不允許，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，所有情節均為成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <script>
+    // 已通過則不再擋（當次瀏覽用 sessionStorage）
+    if (sessionStorage.getItem('erotic_ok') === '1') {
+      document.getElementById('gate').style.display = 'none';
+    }
+    document.getElementById('yes').addEventListener('click', function(){
+      try { sessionStorage.setItem('erotic_ok','1'); } catch(e){}
+      document.getElementById('gate').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>夜讀 · 18+ 成人故事書架</title>
+<meta name="description" content="18+ 成人虛構情慾中篇。僅供成年讀者。" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本網站含 18 歲以上成人虛構情慾故事，僅供成年讀者閱覽。<br>若你未滿 18 歲，或所在地法律不允許，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，所有情節均為成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">夜讀<span>.</span>故事</div>
+      <a class="mini" href="https://troy0201-hash.github.io/stories/">微光站 ↑</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="kicker">18+ Erotic · 成人虛構</div>
+    <h1>夜讀。<br>只給成年人的故事。</h1>
+    <p>5 篇中篇，口味各異：都會的克制、暗戀的距離、直球的感官。皆為成年人雙方自願的虛構創作。</p>
+  </header>
+
+  <main class="bookshelf" id="list">
+    <a class="book" href="story-01.html">
+      <div class="no">NO. 01</div>
+      <div class="taste">都會 · 慢熱</div>
+      <h2>週末的鑰匙</h2>
+      <span class="read">開始閱讀 →</span>
+    </a>
+    <a class="book" href="story-02.html">
+      <div class="no">NO. 02</div>
+      <div class="taste">禁忌 · 暗戀</div>
+      <h2>隔壁的音樂</h2>
+      <span class="read">開始閱讀 →</span>
+    </a>
+    <a class="book" href="story-03.html">
+      <div class="no">NO. 03</div>
+      <div class="taste">直球 · 感官</div>
+      <h2>雨夜的練習</h2>
+      <span class="read">開始閱讀 →</span>
+    </a>
+    <a class="book" href="story-04.html">
+      <div class="no">NO. 04</div>
+      <div class="taste">都會 · 撫慰</div>
+      <h2>夜班之後</h2>
+      <span class="read">開始閱讀 →</span>
+    </a>
+    <a class="book" href="story-05.html">
+      <div class="no">NO. 05</div>
+      <div class="taste">禁忌 · 秘密</div>
+      <h2>未寄的日記</h2>
+      <span class="read">開始閱讀 →</span>
+    </a>
+  </main>
+
+  <footer>18+ 成人虛構創作 · 請勿轉載</footer>
+
+  <script>
+    if (sessionStorage.getItem("erotic_ok") === "1") {
+      document.getElementById("gate").style.display = "none";
+    }
+    document.getElementById("yes").addEventListener("click", function(){
+      try { sessionStorage.setItem("erotic_ok","1"); } catch(e){}
+      document.getElementById("gate").style.display = "none";
+    });
+  </script>
+</body>
+</html>

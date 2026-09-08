@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>週末的鑰匙 · 夜讀</title>
+<meta name="description" content="都會 · 慢熱 · 18+ 成人虛構故事" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本篇為 18 歲以上成人虛構情慾故事，僅供成年讀者。<br>若你未滿 18 歲，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">夜讀<span>.</span>故事</div>
+      <a class="mini" href="index.html">書架 ↑</a>
+    </div>
+  </nav>
+
+  <article class="read-wrap">
+    <div class="breadcrumb"><a href="index.html">書架</a> / 第 01 篇</div>
+    <div class="no">NO. 01 · 都會 · 慢熱</div>
+    <h1>週末的鑰匙</h1>
+    <div class="story">
+    <p>她把備用鑰匙放在他掌心時，沒說話。那是週五晚，加班後的電梯裡，兩人肩碰肩，城市在腳下亮成一片海。</p>
+    <p>他們認識三年，從同事到床伴，規矩只有一條：不問週末之外的日子。她有丈夫，他有女友，都住城市的另一頭。週五的鑰匙，是彼此給對方的、一週裡唯一誠實的時段。</p>
+    <p>他開門，玄關有她脫下的高跟鞋，歪著，像她每次匆忙赴約的樣子。客廳燈沒開，只有臥室漏出一線暖光。她坐在床沿，卸了妝，比白天軟。</p>
+    <p>「今天很累？」他問，手指已經落在她後頸。她閉眼，點頭，又搖頭——累，但想要。這種矛盾她只在他面前承認。</p>
+    <p>他們的身體像兩把熟了的鑰匙，轉動時不必對準，自然就開。她喜歡他慢，喜歡他先吻她手腕內側，再順著小臂往上，像在讀一封寫在皮膚上的信。</p>
+    <p>「你比他想得像我，」她某次在汗裡說，指丈夫。他沒接話，只是把她撈近些。有些比較不必說出口，身體早給了答案。</p>
+    <p>週六午後她走，鑰匙留他那。他送她到電梯，門合上前她回頭看一眼，那眼裡有種他們約定好不碰的東西——近乎依賴。</p>
+    <p>下週五她又來，鑰匙還在她那串裡，多配了一把。他挑眉，她說：「怕你弄丟。」其實是怕自己某週不來，至少還有個念想擱在他那。</p>
+    <p>他們始終沒越過那條線：不分手、不承諾、不問對方週末去哪。週五的鑰匙是極小的誠實，小到剛好能放進平淡的生活，不撐破。</p>
+    <p>有回她遲到，他差點以為規矩廢了。門鈴響，她淋了雨，笑著舉起鑰匙：「驗證一下，還開。」他接過，握在手心，那金屬竟是溫的。</p>
+    <p>後來城市換了幾輪季節，週五的燈一直為彼此留著。他們從不說愛，但鑰匙轉動的聲音，比任何一句都久。</p>
+    </div>
+    <p class="end">— 完 —</p>
+  </article>
+
+  <div class="nav-foot">
+    <div class="prev"><a href="index.html">← 回到書架</a></div>
+    <div class="next"><a class="next" href="story-02.html">下一篇 →</a></div>
+  </div>
+
+  <footer>18+ 成人虛構創作 · 請勿轉載</footer>
+
+  <script>
+    if (sessionStorage.getItem('erotic_ok') === '1') {
+      document.getElementById('gate').style.display = 'none';
+    }
+    document.getElementById('yes').addEventListener('click', function(){
+      try { sessionStorage.setItem('erotic_ok','1'); } catch(e){}
+      document.getElementById('gate').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

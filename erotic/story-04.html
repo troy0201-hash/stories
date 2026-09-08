@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>夜班之後 · 夜讀</title>
+<meta name="description" content="都會 · 撫慰 · 18+ 成人虛構故事" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <div class="age">18+</div>
+      <h2>成人內容提示</h2>
+      <p>本篇為 18 歲以上成人虛構情慾故事，僅供成年讀者。<br>若你未滿 18 歲，請離開。</p>
+      <div class="gate-btns">
+        <button class="gate-yes" id="yes">我已年滿 18 歲，進入</button>
+        <a class="gate-no" href="https://troy0201-hash.github.io/stories/">我未滿 18，離開</a>
+      </div>
+      <div class="gate-note">點擊「進入」即表示你確認已成年且自願瀏覽。本內容為虛構創作，成年人雙方自願。</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">夜讀<span>.</span>故事</div>
+      <a class="mini" href="index.html">書架 ↑</a>
+    </div>
+  </nav>
+
+  <article class="read-wrap">
+    <div class="breadcrumb"><a href="index.html">書架</a> / 第 04 篇</div>
+    <div class="no">NO. 04 · 都會 · 撫慰</div>
+    <h1>夜班之後</h1>
+    <div class="story">
+    <p>他在醫院夜班結束，天還沒亮，手機一則：『湯在爐上。』是住樓下的她，護理師，和他錯班的那種鄰居。</p>
+    <p>他下樓，門虛掩，湯香先到。她穿著他的舊外套——某次借了忘了還，如今像她自己的。兩人都是值夜的人，懂那種魂還沒回殼的累。</p>
+    <p>「喝完再睡，」她盛一碗，不問他今晚送走幾個。他們之間有種省話的體貼：都見過夠多散場，不必再問細節。</p>
+    <p>他喝湯，她靠在對面看，手無意搭上他手背。那觸碰很輕，像試水溫。他沒抽，反而翻掌，把她的手握進來。兩個冷了一夜的手，湊一起就暖了。</p>
+    <p>他們第一次靠這麼近，是某次她 also 夜班崩潰，敲他門，他什麼也沒說，只是讓她躺。那晚起，規矩變成：誰先回家誰留湯。</p>
+    <p>這晚他難得早，主動洗了碗。她從後抱住他，臉貼他背脊，聽見心跳慢下來。『你今天比較活，』她說。他笑，說被你握著手，魂就容易回來。</p>
+    <p>他們沒急。值夜的人學會珍惜難得的清醒，且都怕驚擾對方好不容易鬆下的肩。她吻他，從肩胛開始，一點點往上，像在確認這人還在。</p>
+    <p>床是簡單的，沒有戲。是兩個累壞的人，終於敢在另一個人面前把警報關掉。她說『別撐』，他說『好』，那是他對任何人說過最長的一句軟話。</p>
+    <p>天亮前他睡著，手還握著她。她看著，第一次覺得這城市的值班表沒那麼冷——總有個人也沒睡，在樓下留一鍋湯。</p>
+    <p>後來他們調成同班，卻仍留湯的習慣。湯涼了也喝，因為那是『我記得你回來』的意思。夜班之後的溫柔，不轟烈，但夠撐過很多個長夜。</p>
+    </div>
+    <p class="end">— 完 —</p>
+  </article>
+
+  <div class="nav-foot">
+    <div class="prev"><a href="story-03.html">← 上一篇</a></div>
+    <div class="next"><a class="next" href="story-05.html">下一篇 →</a></div>
+  </div>
+
+  <footer>18+ 成人虛構創作 · 請勿轉載</footer>
+
+  <script>
+    if (sessionStorage.getItem('erotic_ok') === '1') {
+      document.getElementById('gate').style.display = 'none';
+    }
+    document.getElementById('yes').addEventListener('click', function(){
+      try { sessionStorage.setItem('erotic_ok','1'); } catch(e){}
+      document.getElementById('gate').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
