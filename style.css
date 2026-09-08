@@ -165,7 +165,18 @@ footer{
 .chip:hover{border-color:#d8d5ce;color:var(--ink)}
 .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .chip.active span{background:rgba(255,255,255,.18);color:#fff}
-@media(max-width:600px){{
+/* ---- 雙站切換鈕 ---- */
+.twin{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.twin-btn{
+  font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  transition:all .18s ease;
+}
+.twin-btn:hover{transform:translateY(-2px);border-color:#d8d5ce}
+.twin-on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.twin-btn:nth-child(2){color:var(--accent)}
+
+@media(max-width:600px){
   .filterbar{top:57px;padding:14px 20px 2px}
   .chip{padding:8px 15px;font-size:13px}
 }}

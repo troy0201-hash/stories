@@ -1,0 +1,69 @@
+/* ===== 無光·故事 · 暗色懸疑風 ===== */
+:root{
+  --bg:#0e0e11;
+  --ink:#e8e6e1;
+  --muted:#9a978f;
+  --accent:#8b6fb0;
+  --accent-soft:#2a2233;
+  --line:#26242b;
+  --card:#16151a;
+  --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:"PingFang TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+
+.nav{position:sticky;top:0;z-index:10;background:rgba(14,14,17,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Georgia,"Songti TC",serif;font-weight:600;font-size:19px;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.nav a.mini{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+.hero{max-width:var(--max);margin:0 auto;padding:84px 24px 56px}
+.hero .kicker{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+.hero h1{font-family:Georgia,"Songti TC",serif;font-size:clamp(38px,7vw,64px);line-height:1.12;font-weight:600;margin-bottom:20px}
+.hero p{font-size:clamp(16px,2.4vw,19px);color:var(--muted);max-width:46ch}
+.count{display:inline-block;margin-top:26px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 16px;background:var(--card)}
+
+.grid{max-width:var(--max);margin:0 auto;padding:24px 24px 96px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.5);border-color:#3a3645}
+.card .cover{width:calc(100% + 56px);margin:-28px -28px 4px;aspect-ratio:16/9;overflow:hidden;border-radius:18px 18px 0 0;background:var(--line)}
+.card .cover img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.85) contrast(1.05);transition:transform .45s ease,filter .3s ease}
+.card:hover .cover img{transform:scale(1.06);filter:brightness(1)}
+.card .no{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.card h2{font-family:Georgia,"Songti TC",serif;font-size:22px;font-weight:600;line-height:1.3}
+.card .ex{color:var(--muted);font-size:15px;flex:1}
+.card .read{font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.card .read::after{content:"→";transition:transform .18s ease}
+.card:hover .read::after{transform:translateX(4px)}
+
+.read-wrap{max-width:680px;margin:0 auto;padding:64px 24px 96px}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:36px;letter-spacing:.04em}
+.breadcrumb a:hover{color:var(--accent)}
+.read-wrap .no{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+.read-wrap h1{font-family:Georgia,"Songti TC",serif;font-size:clamp(30px,5vw,44px);line-height:1.2;font-weight:600;margin-bottom:14px}
+.read-wrap .sub{color:var(--muted);font-size:16px;margin-bottom:40px}
+.cover-img{width:calc(100% + 48px);margin:0 -24px 36px;aspect-ratio:16/8;overflow:hidden;border-radius:18px}
+.cover-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.9)}
+.story p{font-size:18px;line-height:2;margin-bottom:26px;color:#d8d5ce}
+.nav-foot{max-width:680px;margin:0 auto;padding:0 24px 80px;display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:28px}
+.nav-foot a{font-size:14px;color:var(--muted)}
+.nav-foot a:hover{color:var(--accent)}
+.nav-foot .next{text-align:right}
+
+footer{border-top:1px solid var(--line);padding:36px 24px;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.04em}
+
+@media(max-width:600px){
+  .hero{padding:60px 20px 40px}
+  .grid{padding:20px 20px 72px;grid-template-columns:1fr}
+  .read-wrap{padding:48px 20px 72px}
+  .card .cover{width:calc(100% + 40px);margin:-28px -20px 4px;border-radius:18px 18px 0 0}
+  .cover-img{width:calc(100% + 40px);margin:0 -20px 28px}
+  .nav-foot{flex-direction:column}.nav-foot .next{text-align:left}
+}
