@@ -20,6 +20,11 @@
     <h1>在沒有光的地方，<br>故事也醒著。</h1>
     <p>50 篇關於恐懼、失去與未解的事。如果你怕黑，別看到最後——或者，正因為怕，才要看。</p>
     <div class="count">共 50 篇 · 每篇 3 分鐘讀完</div>
+    <div class="draw">
+      <button class="draw-btn primary" id="randBtn">🎲 隨機抽一篇</button>
+      <button class="draw-btn" id="todayBtn">🌑 今日故事</button>
+    </div>
+    <div class="draw-today" id="todayBox"></div>
     <div class="twin">
       <a class="twin-btn" href="../index.html">☀ 微光 · 溫暖</a>
       <a class="twin-btn twin-on" href="index.html">🌑 無光 · 暗黑</a>
@@ -380,5 +385,26 @@
   </main>
 
   <footer>暗處也有故事 · 願你讀完，仍敢開燈</footer>
+  <script>
+    const links = Array.from(document.querySelectorAll('.card')).map(a => a.getAttribute('href'));
+    const titles = Array.from(document.querySelectorAll('.card h2')).map(h => h.textContent);
+    const total = links.length;
+    document.getElementById('randBtn').addEventListener('click', () => {
+      const i = Math.floor(Math.random()*total);
+      location.href = links[i];
+    });
+    function daySeed(){
+      const d = new Date();
+      return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
+    }
+    document.getElementById('todayBtn').addEventListener('click', () => {
+      const seed = daySeed();
+      const i = seed % total;
+      const box = document.getElementById('todayBox');
+      box.classList.add('show');
+      box.innerHTML = '🌑 今天的暗影是：<a href="'+links[i]+'">'+titles[i]+'</a> —— 同一天再點都會是這篇，明天自動換。';
+      box.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  </script>
 </body>
 </html>

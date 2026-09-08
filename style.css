@@ -165,6 +165,24 @@ footer{
 .chip:hover{border-color:#d8d5ce;color:var(--ink)}
 .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .chip.active span{background:rgba(255,255,255,.18);color:#fff}
+/* ---- 隨機 / 今日 抽籤按鈕 ---- */
+.draw{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.draw-btn{
+  font-family:inherit;cursor:pointer;font-size:15px;font-weight:600;
+  padding:12px 22px;border-radius:999px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);transition:all .18s ease;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.draw-btn:hover{transform:translateY(-2px);border-color:#d8d5ce}
+.draw-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.draw-today{
+  margin-top:14px;font-size:14px;color:var(--muted);
+  border:1px dashed var(--line);border-radius:14px;padding:12px 16px;background:var(--card);
+  display:none;
+}
+.draw-today.show{display:block}
+.draw-today a{color:var(--accent);font-weight:600}
+
 /* ---- 雙站切換鈕 ---- */
 .twin{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
 .twin-btn{
