@@ -3,168 +3,369 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>微光 · 20篇感人短篇故事</title>
-<meta name="description" content="20篇關於愛、遺憾與溫柔的短篇故事。願你在某個瞬間，被一句話接住。" />
+<title>微光 · 40篇短篇故事（感人 / 勵志）</title>
+<meta name="description" content="40篇關於愛、遺憾、溫柔與勇氣的短篇故事。願你在某個瞬間，被一句話接住。" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">微光<span>.</span>故事</div>
-      <a class="mini" href="#list">20 篇 ↓</a>
+      <a class="mini" href="#list">40 篇 ↓</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="kicker">Short Stories · 短篇</div>
     <h1>在平凡日子裡，<br>看見微光。</h1>
-    <p>20 篇關於愛、遺憾與溫柔的小故事。也許有一篇，正好說中你藏起來的那句話。</p>
-    <div class="count">共 20 篇 · 每篇 3 分鐘讀完</div>
+    <p>40 篇關於愛、遺憾、溫柔與勇氣的小故事。也許有一篇，正好說中你藏起來的那句話。</p>
+    <div class="count">共 40 篇 · 每篇 3 分鐘讀完</div>
   </header>
 
+  <div class="filterbar" id="filter">
+    <button class="chip active" data-filter="all">全部 <span>40</span></button>
+    <button class="chip" data-filter="感人">感人 <span>20</span></button>
+    <button class="chip" data-filter="勵志">勵志 <span>20</span></button>
+  </div>
+
   <main class="grid" id="list">
-    <a class="card" href="story-01.html">
+    <a class="card" href="story-01.html" data-cat="感人">
       <div class="cover"><img src="images/story-01.jpg" alt="最後一道菜" loading="lazy"></div>
       <div class="no">NO. 01</div>
+      <span class="tag tag-感人">感人</span>
       <h2>最後一道菜</h2>
       <div class="ex">媽媽總說「吃飯別看手機」，他嫌煩。直到那通電話之後，他才懂那句話的重量。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-02.html">
+    <a class="card" href="story-02.html" data-cat="感人">
       <div class="cover"><img src="images/story-02.jpg" alt="那把傘" loading="lazy"></div>
       <div class="no">NO. 02</div>
+      <span class="tag tag-感人">感人</span>
       <h2>那把傘</h2>
       <div class="ex">暴雨裡，陌生人把傘遞給她，自己走進雨中。多年後，她把傘遞給了另一個人。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-03.html">
+    <a class="card" href="story-03.html" data-cat="感人">
       <div class="cover"><img src="images/story-03.jpg" alt="錄音筆裡的早安" loading="lazy"></div>
       <div class="no">NO. 03</div>
+      <span class="tag tag-感人">感人</span>
       <h2>錄音筆裡的早安</h2>
       <div class="ex">爺爺過世後，他在抽屜底找到一支錄音筆，按下去，是每一天。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-04.html">
+    <a class="card" href="story-04.html" data-cat="感人">
       <div class="cover"><img src="images/story-04.jpg" alt="便當的形狀" loading="lazy"></div>
       <div class="no">NO. 04</div>
+      <span class="tag tag-感人">感人</span>
       <h2>便當的形狀</h2>
       <div class="ex">新同事天天幫她帶一份便當，理由荒唐得讓人想哭。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-05.html">
+    <a class="card" href="story-05.html" data-cat="感人">
       <div class="cover"><img src="images/story-05.jpg" alt="巷口的貓" loading="lazy"></div>
       <div class="no">NO. 05</div>
+      <span class="tag tag-感人">感人</span>
       <h2>巷口的貓</h2>
       <div class="ex">她最慘的那年，唯一準時來見她的，是隻三花貓。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-06.html">
+    <a class="card" href="story-06.html" data-cat="感人">
       <div class="cover"><img src="images/story-06.jpg" alt="未寄出的信" loading="lazy"></div>
       <div class="no">NO. 06</div>
+      <span class="tag tag-感人">感人</span>
       <h2>未寄出的信</h2>
       <div class="ex">父親去世後，她在保險箱找到一疊信，收件人都是她，日期寫到很遠的未來。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-07.html">
+    <a class="card" href="story-07.html" data-cat="感人">
       <div class="cover"><img src="images/story-07.jpg" alt="讓座的人" loading="lazy"></div>
       <div class="no">NO. 07</div>
+      <span class="tag tag-感人">感人</span>
       <h2>讓座的人</h2>
       <div class="ex">他讓座給一位老人，老人坐下後說了一句話，讓他鼻子發酸。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-08.html">
+    <a class="card" href="story-08.html" data-cat="感人">
       <div class="cover"><img src="images/story-08.jpg" alt="外婆的毛衣" loading="lazy"></div>
       <div class="no">NO. 08</div>
+      <span class="tag tag-感人">感人</span>
       <h2>外婆的毛衣</h2>
       <div class="ex">她嫌毛衣土，塞櫃子底。直到某個冬天，才發現針腳裡藏著字。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-09.html">
+    <a class="card" href="story-09.html" data-cat="感人">
       <div class="cover"><img src="images/story-09.jpg" alt="書店的重逢" loading="lazy"></div>
       <div class="no">NO. 09</div>
+      <span class="tag tag-感人">感人</span>
       <h2>書店的重逢</h2>
       <div class="ex">分手十年，他們在同一本書前伸手，書名剛好是當年的暗號。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-10.html">
+    <a class="card" href="story-10.html" data-cat="感人">
       <div class="cover"><img src="images/story-10.jpg" alt="沉默的父親" loading="lazy"></div>
       <div class="no">NO. 10</div>
+      <span class="tag tag-感人">感人</span>
       <h2>沉默的父親</h2>
       <div class="ex">她以為父親不愛她。直到看見他手機裡，全是她的照片。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-11.html">
+    <a class="card" href="story-11.html" data-cat="感人">
       <div class="cover"><img src="images/story-11.jpg" alt="一鍋湯的距離" loading="lazy"></div>
       <div class="no">NO. 11</div>
+      <span class="tag tag-感人">感人</span>
       <h2>一鍋湯的距離</h2>
       <div class="ex">獨居老人摔傷，鄰居端來一鍋湯，湯裡煮著整條巷子的溫度。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-12.html">
+    <a class="card" href="story-12.html" data-cat="感人">
       <div class="cover"><img src="images/story-12.jpg" alt="她還記得" loading="lazy"></div>
       <div class="no">NO. 12</div>
+      <span class="tag tag-感人">感人</span>
       <h2>她還記得</h2>
       <div class="ex">母親失智多年，連他都認不出。唯獨每次見他，都叫得出那個小名。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-13.html">
+    <a class="card" href="story-13.html" data-cat="感人">
       <div class="cover"><img src="images/story-13.jpg" alt="躲在後排的她" loading="lazy"></div>
       <div class="no">NO. 13</div>
+      <span class="tag tag-感人">感人</span>
       <h2>躲在後排的她</h2>
       <div class="ex">單親媽媽偷偷去女兒畢業典禮，坐在最後一排，被女兒發現了。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-14.html">
+    <a class="card" href="story-14.html" data-cat="感人">
       <div class="cover"><img src="images/story-14.jpg" alt="小男孩的存錢筒" loading="lazy"></div>
       <div class="no">NO. 14</div>
+      <span class="tag tag-感人">感人</span>
       <h2>小男孩的存錢筒</h2>
       <div class="ex">教堂捐款箱前，小男孩掏出全部零錢，說要給『挨餓的小朋友』。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-15.html">
+    <a class="card" href="story-15.html" data-cat="感人">
       <div class="cover"><img src="images/story-15.jpg" alt="深夜的關東煮" loading="lazy"></div>
       <div class="no">NO. 15</div>
+      <span class="tag tag-感人">感人</span>
       <h2>深夜的關東煮</h2>
       <div class="ex">加班到凌晨，便利商店店員留了一份關東煮，附紙條：『辛苦了』。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-16.html">
+    <a class="card" href="story-16.html" data-cat="感人">
       <div class="cover"><img src="images/story-16.jpg" alt="退伍那天的車" loading="lazy"></div>
       <div class="no">NO. 16</div>
+      <span class="tag tag-感人">感人</span>
       <h2>退伍那天的車</h2>
       <div class="ex">他退伍那天，以為沒人來接。轉角卻停著那輛老舊的機車。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-17.html">
+    <a class="card" href="story-17.html" data-cat="感人">
       <div class="cover"><img src="images/story-17.jpg" alt="最後的風景" loading="lazy"></div>
       <div class="no">NO. 17</div>
+      <span class="tag tag-感人">感人</span>
       <h2>最後的風景</h2>
       <div class="ex">妻子漸盲，丈夫用一整個月，帶她把最愛的風景『再看』一遍。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-18.html">
+    <a class="card" href="story-18.html" data-cat="感人">
       <div class="cover"><img src="images/story-18.jpg" alt="種樹的老先生" loading="lazy"></div>
       <div class="no">NO. 18</div>
+      <span class="tag tag-感人">感人</span>
       <h2>種樹的老先生</h2>
       <div class="ex">他在荒地種了二十年樹，鄰居笑他傻。他說：『給孫子留點蔭。』</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-19.html">
+    <a class="card" href="story-19.html" data-cat="感人">
       <div class="cover"><img src="images/story-19.jpg" alt="手寫的食譜" loading="lazy"></div>
       <div class="no">NO. 19</div>
+      <span class="tag tag-感人">感人</span>
       <h2>手寫的食譜</h2>
       <div class="ex">媽媽的食譜寫得潦草，她一直看不懂。直到自己當了媽。</div>
       <span class="read">閱讀故事</span>
     </a>
-    <a class="card" href="story-20.html">
+    <a class="card" href="story-20.html" data-cat="感人">
       <div class="cover"><img src="images/story-20.jpg" alt="最後一班車" loading="lazy"></div>
       <div class="no">NO. 20</div>
+      <span class="tag tag-感人">感人</span>
       <h2>最後一班車</h2>
       <div class="ex">末班公車司機多等了一分鐘，改變了一個人的那一夜。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-21.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-21.jpg" alt="翻過那座山" loading="lazy"></div>
+      <div class="no">NO. 21</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>翻過那座山</h2>
+      <div class="ex">起點不重要，重要的是你沒停下腳步。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-22.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-22.jpg" alt="海邊的第一道光" loading="lazy"></div>
+      <div class="no">NO. 22</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>海邊的第一道光</h2>
+      <div class="ex">再長的夜，也擋不住一次日出。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-23.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-23.jpg" alt="最後一名的衝刺" loading="lazy"></div>
+      <div class="no">NO. 23</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>最後一名的衝刺</h2>
+      <div class="ex">輸贏之外，還有「沒放棄」這種贏法。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-24.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-24.jpg" alt="凌晨四點的書桌" loading="lazy"></div>
+      <div class="no">NO. 24</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>凌晨四點的書桌</h2>
+      <div class="ex">你熬的每一夜，都在為某個轉彎鋪路。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-25.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-25.jpg" alt="守塔的人" loading="lazy"></div>
+      <div class="no">NO. 25</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>守塔的人</h2>
+      <div class="ex">在沒人看見的地方發光，也是一種勇敢。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-26.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-26.jpg" alt="一顆種子的耐心" loading="lazy"></div>
+      <div class="no">NO. 26</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>一顆種子的耐心</h2>
+      <div class="ex">你現在埋下的，未必明天發芽，但一定會。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-27.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-27.jpg" alt="畫壞的那張" loading="lazy"></div>
+      <div class="no">NO. 27</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>畫壞的那張</h2>
+      <div class="ex">搞砸的，往往是最後成功的草稿。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-28.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-28.jpg" alt="往上走的樓梯" loading="lazy"></div>
+      <div class="no">NO. 28</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>往上走的樓梯</h2>
+      <div class="ex">每一步都小，合起來就是高度。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-29.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-29.jpg" alt="迷路時的指南針" loading="lazy"></div>
+      <div class="no">NO. 29</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>迷路時的指南針</h2>
+      <div class="ex">方向亂了，先停下，比亂走強。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-30.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-30.jpg" alt="黑夜裡的提燈" loading="lazy"></div>
+      <div class="no">NO. 30</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>黑夜裡的提燈</h2>
+      <div class="ex">你能點亮的，不只是自己。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-31.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-31.jpg" alt="搭一座橋" loading="lazy"></div>
+      <div class="no">NO. 31</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>搭一座橋</h2>
+      <div class="ex">與其抱怨隔閡，不如動手搭。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-32.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-32.jpg" alt="煙火前的沉默" loading="lazy"></div>
+      <div class="no">NO. 32</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>煙火前的沉默</h2>
+      <div class="ex">最亮的那刻，前面總有一段黑。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-33.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-33.jpg" alt="紙船的遠行" loading="lazy"></div>
+      <div class="no">NO. 33</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>紙船的遠行</h2>
+      <div class="ex">能啟程，就贏過停在岸邊。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-34.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-34.jpg" alt="下一步棋" loading="lazy"></div>
+      <div class="no">NO. 34</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>下一步棋</h2>
+      <div class="ex">輸一子不算輸，棄局才是。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-35.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-35.jpg" alt="滿天星下的決定" loading="lazy"></div>
+      <div class="no">NO. 35</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>滿天星下的決定</h2>
+      <div class="ex">渺小，不代表不能發光。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-36.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-36.jpg" alt="浪裡的練習" loading="lazy"></div>
+      <div class="no">NO. 36</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>浪裡的練習</h2>
+      <div class="ex">被打翻，是學會站穩的代價。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-37.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-37.jpg" alt="岩壁上的手" loading="lazy"></div>
+      <div class="no">NO. 37</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>岩壁上的手</h2>
+      <div class="ex">抓不住的，就先鬆手，再找下一個。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-38.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-38.jpg" alt="路上的風景" loading="lazy"></div>
+      <div class="no">NO. 38</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>路上的風景</h2>
+      <div class="ex">目的地會到，過程才叫人生。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-39.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-39.jpg" alt="飛不起來的鳥" loading="lazy"></div>
+      <div class="no">NO. 39</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>飛不起來的鳥</h2>
+      <div class="ex">飛不遠，也要拍翅。</div>
+      <span class="read">閱讀故事</span>
+    </a>
+    <a class="card" href="story-40.html" data-cat="勵志">
+      <div class="cover"><img src="images/story-40.jpg" alt="亮起的那盞燈" loading="lazy"></div>
+      <div class="no">NO. 40</div>
+      <span class="tag tag-勵志">勵志</span>
+      <h2>亮起的那盞燈</h2>
+      <div class="ex">靈感來時，別讓它熄。</div>
       <span class="read">閱讀故事</span>
     </a>
   </main>
 
   <footer>用 ❤️ 寫成 · 願你被溫柔以待</footer>
+
+  <script>
+    const chips = document.querySelectorAll('.chip');
+    const cardsAll = document.querySelectorAll('.card');
+    chips.forEach(c => c.addEventListener('click', () => {
+      chips.forEach(x => x.classList.remove('active'));
+      c.classList.add('active');
+      const f = c.dataset.filter;
+      cardsAll.forEach(card => {
+        const show = (f === 'all' || card.dataset.cat === f);
+        card.style.display = show ? '' : 'none';
+      });
+      window.scrollTo({top: document.getElementById('list').offsetTop - 70, behavior:'smooth'});
+    }));
+  </script>
 </body>
 </html>
