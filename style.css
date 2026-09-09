@@ -183,7 +183,27 @@ footer{
 .draw-today.show{display:block}
 .draw-today a{color:var(--accent);font-weight:600}
 
-/* ---- 雙站切換鈕 ---- */
+/* ---- 搜尋框 ---- */
+.searchbar{max-width:var(--max);margin:0 auto;padding:8px 24px 0}
+.searchbar input{
+  width:100%;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:13px 20px;outline:none;transition:border-color .18s ease;
+}
+.searchbar input:focus{border-color:var(--accent)}
+.searchbar input::placeholder{color:var(--muted)}
+
+/* ---- 書籤按鈕 ---- */
+.bookmark{
+  position:absolute;top:14px;right:14px;z-index:3;
+  width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,255,255,.82);color:var(--accent);font-size:16px;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .15s ease,background .15s ease;
+}
+.bookmark:hover{transform:scale(1.12)}
+.bookmark.on{background:var(--accent);color:#fff}
+.card{position:relative}
 .twin{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
 .twin-btn{
   font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;

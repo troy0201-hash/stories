@@ -24,7 +24,8 @@
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">夜讀<span>.</span>故事</div>
-      <a class="mini" href="https://troy0201-hash.github.io/stories/">微光站 ↑</a>
+      <a class="mini" href="../about.html">關於</a>
+      <a class="mini" href="../index.html">微光站 ↑</a>
     </div>
   </nav>
 
@@ -33,6 +34,10 @@
     <h1>夜讀。<br>只給成年人的故事。</h1>
     <p>成年人之間、雙方自願的虛構情慾故事。請斟酌閱讀。</p>
   </header>
+
+  <div class="searchbar">
+    <input type="text" id="searchInput" placeholder="🔍 搜尋故事標題…（例如：鑰匙、距離、晨間）" />
+  </div>
 
   <main class="bookshelf" id="list">
     <a class="book" href="story-01.html">
@@ -96,6 +101,7 @@
   <footer>18+ 成人虛構創作 · 請勿轉載</footer>
 
   <script>
+    // 年齡閘門
     if (sessionStorage.getItem("erotic_ok") === "1") {
       document.getElementById("gate").style.display = "none";
     }
@@ -103,6 +109,41 @@
       try { sessionStorage.setItem("erotic_ok","1"); } catch(e){}
       document.getElementById("gate").style.display = "none";
     });
+
+    // 書籤 + 搜尋（閘門通過後才操作 DOM，但提前綁也沒事）
+    const cardsAll = Array.from(document.querySelectorAll('.book'));
+    const KEY = 'yedu_bookmarks';
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(e){}
+    cardsAll.forEach(card => {
+      const href = card.getAttribute('href');
+      const btn = document.createElement('button');
+      btn.className = 'bookmark' + (saved.includes(href) ? ' on' : '');
+      btn.textContent = saved.includes(href) ? '★' : '☆';
+      btn.title = '收藏這篇';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault(); e.stopPropagation();
+        let list = [];
+        try { list = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(err){}
+        if (list.includes(href)) { list = list.filter(x => x !== href); btn.textContent='☆'; btn.classList.remove('on'); }
+        else { list.push(href); btn.textContent='★'; btn.classList.add('on'); }
+        localStorage.setItem(KEY, JSON.stringify(list));
+      });
+      card.appendChild(btn);
+    });
+
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        cardsAll.forEach(card => {
+          const title = (card.querySelector('h2')||{}).textContent || '';
+          const taste = (card.querySelector('.taste')||{}).textContent || '';
+          const hit = !q || (title+taste).toLowerCase().includes(q);
+          card.style.display = hit ? '' : 'none';
+        });
+      });
+    }
   </script>
 </body>
 </html>

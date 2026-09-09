@@ -5,12 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>微光 · 50篇短篇故事（感人 / 勵志 / 治癒）</title>
 <meta name="description" content="50篇關於愛、遺憾、溫柔、勇氣與治癒的短篇故事。願你在某個瞬間，被一句話接住。" />
+<meta property="og:title" content="微光 · 故事" />
+<meta property="og:description" content="50篇關於愛、勇氣與治癒的短篇故事。" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="og-weiguang.png" />
+<meta property="og:url" content="https://troy0201-hash.github.io/stories/" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">微光<span>.</span>故事</div>
+      <a class="mini" href="about.html">關於</a>
       <a class="mini" href="noguang/index.html">無光站 →</a>
       <a class="mini" href="erotic/index.html" style="color:var(--accent)">夜讀 18+ →</a>
     </div>
@@ -31,6 +37,10 @@
       <a class="twin-btn" href="noguang/index.html">🌑 無光 · 暗黑</a>
     </div>
   </header>
+
+  <div class="searchbar">
+    <input type="text" id="searchInput" placeholder="🔍 搜尋故事標題或內容…（例如：媽媽、勇氣、貓）" />
+  </div>
 
   <div class="filterbar" id="filter">
     <button class="chip active" data-filter="all">全部 <span>50</span></button>
@@ -446,7 +456,30 @@
 
   <script>
     const chips = document.querySelectorAll('.chip');
-    const cardsAll = document.querySelectorAll('.card');
+    const cardsAll = Array.from(document.querySelectorAll('.card'));
+    const KEY = 'weiguang_bookmarks';
+
+    // 每張卡片補書籤按鈕
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(e){}
+    cardsAll.forEach(card => {
+      const href = card.getAttribute('href');
+      const btn = document.createElement('button');
+      btn.className = 'bookmark' + (saved.includes(href) ? ' on' : '');
+      btn.textContent = saved.includes(href) ? '★' : '☆';
+      btn.title = '收藏這篇';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault(); e.stopPropagation();
+        let list = [];
+        try { list = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(err){}
+        if (list.includes(href)) { list = list.filter(x => x !== href); btn.textContent='☆'; btn.classList.remove('on'); }
+        else { list.push(href); btn.textContent='★'; btn.classList.add('on'); }
+        localStorage.setItem(KEY, JSON.stringify(list));
+      });
+      card.appendChild(btn);
+    });
+
+    // 分類篩選
     chips.forEach(c => c.addEventListener('click', () => {
       chips.forEach(x => x.classList.remove('active'));
       c.classList.add('active');
@@ -457,27 +490,31 @@
       });
       window.scrollTo({top: document.getElementById('list').offsetTop - 70, behavior:'smooth'});
     }));
-  </script>
-  <script>
-    // 抽籤功能：所有故事連結
-    const links = Array.from(document.querySelectorAll('.card')).map(a => a.getAttribute('href'));
-    const titles = Array.from(document.querySelectorAll('.card h2')).map(h => h.textContent);
-    const total = links.length;
-    const pad = n => String(n).padStart(2,'0');
 
+    // 搜尋
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      cardsAll.forEach(card => {
+        const title = (card.querySelector('h2')||{}).textContent || '';
+        const ex = (card.querySelector('.ex')||{}).textContent || '';
+        const tag = (card.querySelector('.tag')||{}).textContent || '';
+        const hit = !q || (title+ex+tag).toLowerCase().includes(q);
+        card.style.display = hit ? '' : 'none';
+      });
+    });
+
+    // 抽籤
+    const links = cardsAll.map(a => a.getAttribute('href'));
+    const titles = cardsAll.map(h => (h.querySelector('h2')||{}).textContent || '');
+    const total = links.length;
     document.getElementById('randBtn').addEventListener('click', () => {
       const i = Math.floor(Math.random()*total);
       location.href = links[i];
     });
-
-    // 今日故事：以日期為種子，同一天固定同一篇
-    function daySeed(){
-      const d = new Date();
-      return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
-    }
+    function daySeed(){ const d=new Date(); return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate(); }
     document.getElementById('todayBtn').addEventListener('click', () => {
-      const seed = daySeed();
-      const i = seed % total;
+      const seed = daySeed(); const i = seed % total;
       const box = document.getElementById('todayBox');
       box.classList.add('show');
       box.innerHTML = '☀ 今天的微光是：<a href="'+links[i]+'">'+titles[i]+'</a> —— 同一天再點都會是這篇，明天自動換。';
